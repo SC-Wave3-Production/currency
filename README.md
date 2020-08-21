@@ -1,2 +1,2 @@
 # Currency calculator
-## Skillcrucial students project
+Visualition for [exchangeratesapi.io](https://exchangeratesapi.io/)
