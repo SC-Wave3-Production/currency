@@ -1,5 +1,5 @@
 async function getCurrencyList() {
-    const result = await axios('https://api.exchangeratesapi.io/latest?base="USD"')
+    const result = await axios('https://api.exchangeratesapi.io/latest?base=USD')
     console.log('currencies list are the following',Object.keys(result.data.rates))
     return Object.keys(result.data.rates)
 }
