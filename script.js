@@ -5,12 +5,10 @@ async function getCurrencyList() {
 }
 getCurrencyList()
 
-async function getCurrencyRates(currency1, currency2, count) {
-    const result = await axios(`https://api.exchangeratesapi.io/latest?base=${currency1}`)
+async function getCurrencyRates(currency1, currency2, count, date='latest') {
+    const result = await axios(`https://api.exchangeratesapi.io/${date}?base=${currency1}`)
     console.log('rates are the following',result.data.rates[currency2]*count)
-    return result.data.rates
+    return result.data.rates[currency2]*count
 }
 
-
-
-getCurrencyRates('USD', 'EUR', 2)
+getCurrencyRates('EUR', 'RUB', 1)
